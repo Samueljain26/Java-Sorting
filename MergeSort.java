@@ -5,8 +5,6 @@ class MergeSort {
     public static void mergeSort(int[] arr, int left, int right) {
         if (left < right) {
             int mid = left + (right - left) / 2;
-
-            // Recursively divide the array into two halves
             mergeSort(arr, left, mid);
             mergeSort(arr, mid + 1, right);
 
@@ -22,8 +20,6 @@ class MergeSort {
 
         int[] leftArr = new int[n1];
         int[] rightArr = new int[n2];
-
-        // Copy data to temporary arrays
         for (int i = 0; i < n1; i++) {
             leftArr[i] = arr[left + i];
         }
@@ -33,7 +29,6 @@ class MergeSort {
 
         int i = 0, j = 0, k = left;
 
-        // Merge the two arrays
         while (i < n1 && j < n2) {
             if (leftArr[i] <= rightArr[j]) {
                 arr[k] = leftArr[i];
